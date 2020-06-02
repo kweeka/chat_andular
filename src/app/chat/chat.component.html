@@ -1,0 +1,47 @@
+<div class="main_container">
+    <div class="chat_form">
+        <div class="contacts_form">
+            <div *ngFor="let contact of contacts" (click)="currentContact = contact" class="contact_position"
+                 [ngClass]="{current_contact: currentContact !== null && contact.id === currentContact.id}">
+                <div class="contacts_circle">{{contact.name.charAt(0)}}</div>
+                <div class="contacts_data">
+                    <div>{{contact.name}}</div>
+                    <div>{{contact.email}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="message_form">
+            <div *ngIf="!currentContact">
+                <div style="height: 70px">Start a chat, select a friend</div>
+            </div>
+            <div *ngIf="currentContact" class="new_chat">
+                <div class="chat">
+                    <div *ngFor="let message of messages" class="chat_flex">
+                        <div *ngIf="message.sender === 'me'" class="message_from_me message_style">
+                            <div class="flex_date_contact">
+                                <div>data</div>
+                                <div>Me</div>
+                            </div>
+                            <div>
+                                <div>{{message.message}}</div>
+                            </div>
+                        </div>
+                        <div *ngIf="message.sender !== 'me'" class="message_for_me message_style">
+                            <div class="flex_date_contact">
+                                <div>{{currentContact.name}}</div>
+                                <div>data</div>
+                            </div>
+                            <div>
+                                <div>{{message.message}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat_button">
+                    <input type="text" placeholder="new mail" [(ngModel)]="newMessage" style="flex-grow: 2; padding: 5px;"/>
+                    <input type="button" value="Send" (click)="sendMessage()"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

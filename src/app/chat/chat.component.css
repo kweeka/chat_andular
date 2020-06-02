@@ -1,0 +1,154 @@
+.main_container {
+    padding: 0px 15px;
+    width: 800px;
+    margin: 40px auto;
+    height: 70px;
+}
+
+.current_contact {
+    font-weight: bold;
+}
+
+.chat_form {
+    display: flex;
+    background-color: #ffedd8;
+}
+
+.contacts_form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border-right: solid 1px #d9c0a3;
+}
+.contact_position {
+    height: 30px;
+    border-bottom: solid 1px #d9c0a3;
+    padding: 10px;
+    font-size: 15px;
+    display: flex;
+}
+
+.contacts_form div:last-child{
+    border-bottom: none;
+}
+
+.contacts_data {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts_circle {
+    color: #FFFFFF;
+    background-color: #db9849;
+    line-height: 25px;
+    height: 28px;
+    width: 28px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 19px;
+    margin-right: 15px;
+}
+
+.message_form {
+    flex-grow: 2;
+    text-align: center;
+    Align-self: center;
+    color: #a6937d;
+    padding: 5px;
+}
+
+.new_chat {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat {
+    flex-basis: 363px;
+    margin: 0px 15px;
+}
+
+.chat_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat_button input{
+    border: none;
+    background-color: #fff8ef;
+    border-right: solid 1px #d9c0a3;
+    color: #a6937d;
+}
+
+.chat_button {
+    display: flex;
+    height: 30px;
+}
+
+input {
+    outline:none;
+}
+
+.chat_button input:last-child{
+    border-right: none;
+    cursor: pointer;
+}
+
+.chat_button input::placeholder {
+    color: #a6937d;
+}
+
+.message_for_me {
+    text-align: left;
+    align-self: flex-start;
+}
+
+.message_from_me {
+    text-align: right;
+    align-self: flex-end;
+}
+
+.message_style {
+    width: 60%;
+    background-color: #fff8ef;
+    border-radius: 8px;
+    padding: 7px 11px;
+    margin-bottom: 10px;
+}
+
+.flex_date_contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

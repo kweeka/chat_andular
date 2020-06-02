@@ -1,0 +1,18 @@
+.auth_form {
+    width: 200px;
+    height: 250px;
+    background-color: #f2f3f4;
+    position: fixed;
+    left: 500px;
+    top: 200px;
+    padding: 10px;
+}
+
+.auth_form h4 {
+    font-weight: normal;
+    font-size: 16px;
+}
+.auth_form input {
+    margin: 0px 0px 15px 0px;
+    border-radius: 2px;
+}
