@@ -1,0 +1,2 @@
+<app-authorization *ngIf="!contacts.length"></app-authorization>
+<app-chat *ngIf="contacts.length" [contacts]="contacts" ></app-chat>
