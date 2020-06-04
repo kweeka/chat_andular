@@ -26,6 +26,7 @@
     padding: 10px;
     font-size: 15px;
     display: flex;
+    cursor: pointer;
 }
 
 .contacts_form div:last-child{
@@ -52,19 +53,23 @@
 
 .message_form {
     flex-grow: 2;
-    text-align: center;
-    Align-self: center;
     color: #a6937d;
     padding: 5px;
+}
+
+.no_contacts {
+    text-align: center;
+    Align-self: center;
 }
 
 .new_chat {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .chat {
-    flex-basis: 363px;
     margin: 0px 15px;
 }
 

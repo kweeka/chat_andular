@@ -1,6 +1,8 @@
-<div class="auth_form">
-    <h4>Please, authorization</h4>
-    <input type="text" placeholder="Name" [(ngModel)]="userName"/><br/>
-    <input type="text" placeholder="Email" [(ngModel)]="userEmail"/><br/>
-    <input type="button" value="Join chat" (click)="authorization()"/>
+<div class="main_auth_container">
+    <div class="auth_form">
+        <h4>SIGN IN</h4>
+        <input type="text" placeholder="Name" [(ngModel)]="userName"/><br/>
+        <input type="text" placeholder="Email" [(ngModel)]="userEmail"/><br/>
+        <input id="button_auth" type="button" value="JOIN CHAT" (click)="authorization()"/>
+    </div>
 </div>

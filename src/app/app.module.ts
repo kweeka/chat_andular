@@ -6,7 +6,7 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { FormsModule } from '@angular/forms';
 import { ChatComponent } from './chat/chat.component';
 
-const config: SocketIoConfig = {url: 'http://192.168.1.150:8081', options: {}};
+const config: SocketIoConfig = {url: 'http://192.168.1.150:8082', options: {}};
 
 @NgModule({
   declarations: [
