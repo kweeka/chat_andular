@@ -10,11 +10,11 @@
                 </div>
             </div>
         </div>
-        <div class="message_form">
-            <div *ngIf="!currentContact">
-                <div style="height: 70px">Start a chat, select a friend</div>
-            </div>
-            <div *ngIf="currentContact" class="new_chat">
+        <div *ngIf="!currentContact" class="message_form no_contacts">
+            <div style="height: 70px">Start a chat, select a friend</div>
+        </div>
+        <div class="message_form" *ngIf="currentContact">
+            <div class="new_chat">
                 <div class="chat">
                     <div *ngFor="let message of messages" class="chat_flex">
                         <div *ngIf="message.sender === 'me'" class="message_from_me message_style">
