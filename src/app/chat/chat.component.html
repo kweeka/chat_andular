@@ -1,14 +1,16 @@
 <div class="main_container">
     <div class="chat_form">
         <div class="contacts_form">
-            <div *ngFor="let contact of contacts" (click)="currentContact = contact" class="contact_position"
-                 [ngClass]="{current_contact: currentContact !== null && contact.id === currentContact.id}">
-                <div class="contacts_circle">{{contact.name.charAt(0)}}</div>
-                <div class="contacts_data">
-                    <div>{{contact.name}}</div>
-                    <div>{{contact.email}}</div>
-                </div>
-            </div>
+            <mat-selection-list #shoes [multiple]="false">
+                <mat-list-option *ngFor="let contact of contacts" (click)="currentContact = contact" class="contact_position"
+                                 [ngClass]="{current_contact: currentContact !== null && contact.id === currentContact.id}">
+                    <div class="contacts_circle">{{contact.name.charAt(0)}}</div>
+                    <div class="contacts_data">
+                        <div>{{contact.name}}</div>
+                        <div>{{contact.email}}</div>
+                    </div>
+                </mat-list-option>
+            </mat-selection-list>
         </div>
         <div *ngIf="!currentContact" class="message_form no_contacts">
             <div style="height: 70px">Start a chat, select a friend</div>
@@ -19,7 +21,7 @@
                     <div *ngFor="let message of messages" class="chat_flex">
                         <div *ngIf="message.sender === 'me'" class="message_from_me message_style">
                             <div class="flex_date_contact">
-                                <div>data</div>
+                                <div class="data_mail">data</div>
                                 <div>Me</div>
                             </div>
                             <div>
@@ -38,8 +40,14 @@
                     </div>
                 </div>
                 <div class="chat_button">
-                    <input type="text" placeholder="new mail" [(ngModel)]="newMessage" style="flex-grow: 2; padding: 5px;"/>
-                    <input type="button" value="Send" (click)="sendMessage()"/>
+                    <mat-form-field appearance="fill" class="auth_form_input">
+                        <mat-label>New message</mat-label>
+                        <textarea id="textarea" style="overflow:hidden;" matInput maxlength="1000" [(ngModel)]="newMessage" [ngModelOptions]="{standalone: true}"
+                        (click)="textarea()" (keydown.enter)="sendMessageEnter($event)" (keydown.shift.control)="messageEnter($event)"></textarea>
+                    </mat-form-field>
+                    <section id="section_button">
+                        <button mat-flat-button color="primary" (click)="sendMessage()" class="button_auth" id="button_send_mail">Primary</button>
+                    </section>
                 </div>
             </div>
         </div>

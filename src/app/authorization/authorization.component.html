@@ -1,8 +1,22 @@
 <div class="main_auth_container">
     <div class="auth_form">
         <h4>SIGN IN</h4>
-        <input type="text" placeholder="Name" [(ngModel)]="userName"/><br/>
-        <input type="text" placeholder="Email" [(ngModel)]="userEmail"/><br/>
-        <input id="button_auth" type="button" value="JOIN CHAT" (click)="authorization()"/>
+        <div class="auth_form_input">
+            <form class="auth_form_input">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Name</mat-label>
+                    <input matInput #message [(ngModel)]="userName" [ngModelOptions]="{standalone: true}"/>
+                </mat-form-field>
+            </form>
+        </div>
+        <form class="auth_form_input">
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput #message maxlength="30" [(ngModel)]="userEmail" [ngModelOptions]="{standalone: true}"/>
+            </mat-form-field>
+        </form>
+        <section>
+            <button mat-stroked-button color="primary" (click)="authorization()" class="button_auth">JOIN CHAT</button>
+        </section>
     </div>
 </div>
