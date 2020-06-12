@@ -12,32 +12,15 @@
 }
 
 .auth_form h4 {
-    margin: 0px 0px 26px 0px;
+    margin: 0px;
     font-weight: normal;
     font-size: 20px;
     color: #856f57;
 }
 
-.auth_form input {
-    margin: 0px 0px 15px 0px;
-    border-radius: 2px;
-    outline: none;
-    background-color: #fff8ef;
-    border: solid 1px #ead0b4;
-    color: #a6937d;
-    height: 27px;
-    width: 90%;
-    padding: 0px 0px 0px 5px;
-}
-
-.auth_form input::placeholder {
-    color: #a6937d;
-}
-
-
-#button_auth {
+.button_auth {
     height: 37px;
-    margin-top: 21px;
+    margin-top: 10px;
     background-color: #f0d8bd;
     color: #856f57;
     font-size: 16px;
@@ -48,15 +31,18 @@
     background-color: #ead0b4;
 }
 
+:host mat-form-field{
+    width: 260px !important;
+}
 
+:host mat-label{
+    color: #856f57 !important;
+    border-color: #856f57 !important;
+}
 
-
-
-
-
-
-
-
+/*:host /deep/ mat-form-field div div span{
+    background-color: #308524 !important;
+}*/
 
 
 
